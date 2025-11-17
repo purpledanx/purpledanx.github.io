@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel - Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Oxygen:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <section class="hero">
+        <h1>Hi, I'm <span
+                style="background: linear-gradient(90deg, #7b2de2, #a560ff); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; color: white;">purpledan</span>
+        </h1>
+        <p class="subtitle">Roblox Developer</p>
+        <div class="scroll-down" onclick="scrollToContent()">
+            <button>View My Work</button>
+            <div class="arrow">↓</div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I’m <strong>purpledan.</strong> I code Roblox games and occasionally build websites.
+                    I value perfection and excellence in my work, but I also recognize that I don’t know everything -
+                    and I embrace every learning opportunity to its fullest.
+                    I started coding when my school put a blocking extension on my Chromebook.
+                    I got frustrated that I couldn’t access CoolMathGames in class anymore, so I learned website
+                    building with GitHub to create unblocked sites for my classmates.
+                    At the same time, Roblox was my favorite game, and I realized I could try making better games then
+                    the ones I was playing.
+                    That’s when I started coding Roblox games.
+                    Four years later, I’m still coding and always looking for ways to improve.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item"
+                    style="background-image: url('assets/robloxstudio.svg'); background-size: cover; background-position: center; position: relative; background-size: 60%; background-repeat: no-repeat;">
+                    <div style="position: relative; z-index: 1;">
+                        <h3>Roblox Studio</h3>
+                        <p>Game development & scripting</p>
+                    </div>
+                    <div
+                        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(221, 238, 255, 0.8); border-radius: 5px;">
+                    </div>
+                </div>
+                <div class="skill-item"
+                    style="background-image: url('assets/luau.svg'); background-size: cover; background-position: center; position: relative; background-size: 60%; background-repeat: no-repeat;">
+                    <div style="position: relative; z-index: 1;">
+                        <h3>Luau</h3>
+                        <p>Programming language</p>
+                    </div>
+                    <div
+                        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(221, 238, 255, 0.8); border-radius: 5px;">
+                    </div>
+                </div>
+                <div class="skill-item"
+                    style="position: relative; overflow: hidden;background-image: url('assets/html5.svg'), url('assets/javascript.svg'), url('assets/css.svg'); background-repeat: no-repeat, no-repeat, no-repeat; background-size: 25% 100%, 25% 100%, 25% 100%; background-position: left 10px center, center center, right 10px center; ">
+                    <div style="position: relative; z-index: 1;">
+                        <h3>Web Development</h3>
+                        <p>HTML, JavaScript, CSS</p>
+                    </div>
+                    <div
+                        style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(221, 238, 255, 0.8); border-radius: 5px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Exodo Wiki</h3>
+                    <p>A wiki I helped to code and customize for the Roblox game Exodo.</p>
+                    <a href="https://exodo.miraheze.org/wiki/Main_Page" class="project-link" target="_blank">View Project →</a>
+                </div>
+                <div class="project-card">
+                    <h3>War of the Worlds</h3>
+                    <p>I helped contribute an admin command line system with global and server polls and annoucements</p>
+                    <a href="https://www.roblox.com/games/84987799649901/War-of-the-Worlds" class="project-link" target="_blank">View Project →</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section id="socials">
+        <h2>Connect Me</h2>
+        <div class="socials-grid">
+            <div class="social-card github">
+                <div class="social-icon">
+                    <img src="assets/github.svg" alt="Github Icon" width="40" height="40">
+                </div>
+                <div class="social-info">
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/purpledanx" target="_blank">
+                        Check out my code
+                    </a>
+                    <p>(not a lot)</p>
+                </div>
+            </div>
+            <div class="social-card roblox">
+                <div class="social-icon">
+                    <img src="assets/roblox.svg" alt="Roblox Icon" width="40" height="40">
+                </div>
+                <div class="social-info">
+                    <h3>Roblox</h3>
+                    <a href="https://www.roblox.com/users/1557805206/profile" target="_blank">
+                        View my profile
+                    </a>
+                </div>
+            </div>
+            <div class="social-card discord">
+                <div class="social-icon">
+                    <img src="assets/discord.svg" alt="Discord Icon" width="40" height="40">
+                </div>
+                <div class="social-info">
+                    <h3>Discord</h3>
+                    <p>Username: purpledanx</p>
+                </div>
+            </div>
+            <div class="social-card mail">
+                <div class="social-icon">
+                    <img src="assets/gmail.svg" alt="Gmail Icon" width="40" height="40">
+                </div>
+                <div class="social-info">
+                    <h3>Email</h3>
+                    <a href="mailto:purpledanielx@gmail.com" target="_blank">
+                        purpledanielx@gmail.com
+                    </a>
+                    <p>(I don't check my mail often)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 Daniel. Made by me.</p>
+    </footer>
+</body>
+
+</html>
