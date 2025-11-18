@@ -23,7 +23,6 @@ body {
     background-size: 200% 200%;
     color: white;
     position: relative;
-    transition: background-position 0.3s ease;
 }
 
 .hero h1 {
