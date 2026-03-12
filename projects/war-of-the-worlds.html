@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War of the Worlds - purpledan</title>
+    <link rel="icon" type="image/x-icon" href="../assets/roblox.svg">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Oxygen:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0">
+    <script src="../script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="nav-brand">purpledan</a>
+        <div class="nav-actions">
+            <a href="../index.html#about" class="nav-icon-link" data-tip="About Me" aria-label="Go to About section">
+                <span class="material-symbols-outlined">person</span>
+            </a>
+            <a href="../index.html#skills" class="nav-icon-link" data-tip="Skills" aria-label="Go to Skills section">
+                <span class="material-symbols-outlined">code</span>
+            </a>
+            <a href="../index.html#projects" class="nav-icon-link" data-tip="Projects" aria-label="Go to Projects section">
+                <span class="material-symbols-outlined">deployed_code</span>
+            </a>
+            <a href="../index.html#socials" class="nav-icon-link" data-tip="Connect" aria-label="Go to Connect section">
+                <span class="material-symbols-outlined">groups</span>
+            </a>
+            <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
+        </div>
+    </nav>
+
+    <div class="project-page">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+
+        <header class="project-header">
+            <h1>War of the Worlds</h1>
+            <span class="project-tag">Roblox Game</span>
+        </header>
+
+        <div class="project-body">
+            <h2>Overview</h2>
+            <p>
+                I helped contribute an admin command line system with global and server polls and announcements
+                for the Roblox game War of the Worlds. The system allows staff to manage the game efficiently
+                with real-time server-wide communication tools. The base of the system is made with <a href="https://devforum.roblox.com/t/cmdr-a-fully-extensible-and-type-safe-command-console-for-roblox-developers/182815" target="_blank">Cmdr</a> by evara.
+            </p>
+
+            <h2>What I Did</h2>
+            <ul>
+                <li>Built a custom admin command line interface for in-game staff</li>
+                <li>Implemented global and per-server poll systems</li>
+                <li>Created an announcement system that broadcasts across active servers</li>
+                <li>Designed the system to be modular and easy for other developers to extend</li>
+            </ul>
+
+            <h2>Tech Used</h2>
+            <div class="tech-tags">
+                <span>Luau</span>
+                <span>Roblox Studio</span>
+                <span>MessagingService</span>
+                <span>RemoteEvents</span>
+            </div>
+
+            <h2>Media</h2>
+            <div class="media-grid">
+                <figure class="media-card">
+                    <img src="../assets/project-image-template.svg" alt="Project image template placeholder">
+                    <figcaption>War of the Worlds image preview.</figcaption>
+                </figure>
+                <figure class="media-card">
+                    <video class="project-video" controls poster="../assets/project-video-template.svg"></video>
+                    <figcaption>Video template (add an MP4 source to this player).</figcaption>
+                </figure>
+            </div>
+
+            <div class="project-cta">
+                <a href="https://www.roblox.com/games/84987799649901/War-of-the-Worlds" target="_blank" class="project-link-btn">Play on Roblox →</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Daniel. Made by me.</p>
+    </footer>
+</body>
+
+</html>

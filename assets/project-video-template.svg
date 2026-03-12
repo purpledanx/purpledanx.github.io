@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Project video placeholder">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2f3f8c"/>
+      <stop offset="100%" stop-color="#5a6ce0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g2)"/>
+  <circle cx="640" cy="360" r="90" fill="#ffffff" fill-opacity="0.88"/>
+  <polygon points="615,315 615,405 700,360" fill="#5a6ce0"/>
+  <text x="640" y="540" text-anchor="middle" fill="#eef2ff" font-size="42" font-family="Oxygen, Arial, sans-serif" font-weight="700">Project Video</text>
+  <text x="640" y="585" text-anchor="middle" fill="#d9e0ff" font-size="28" font-family="Oxygen, Arial, sans-serif">Add your gameplay/demo mp4</text>
+</svg>
