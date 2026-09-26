@@ -1,183 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>purpledan - Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="assets/roblox.svg">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Oxygen:wght@300;400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Roblox games, systems, and websites by purpledan. See selected projects and demos."
+    />
+    <title>purpledan — Roblox developer</title>
+    <link rel="canonical" href="https://purpledanx.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="purpledan" />
+    <meta property="og:title" content="purpledan — Roblox developer" />
+    <meta property="og:description" content="Roblox games, systems, and websites by purpledan. See selected projects and demos." />
+    <meta property="og:url" content="https://purpledanx.github.io/" />
+    <meta property="og:image" content="https://purpledanx.github.io/assets/images/site-preview.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="purpledan, Roblox developer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="purpledan — Roblox developer" />
+    <meta name="twitter:description" content="Roblox games, systems, and websites by purpledan." />
+    <meta name="twitter:image" content="https://purpledanx.github.io/assets/images/site-preview.png" />
+    <link rel="icon" href="assets/roblox.svg" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <script type="importmap">
-        {
-            "imports": {
-                "react": "https://esm.sh/react@18.2.0",
-                "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
-                "react/jsx-dev-runtime": "https://esm.sh/react@18.2.0/jsx-dev-runtime",
-                "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-                "@paper-design/shaders-react": "https://esm.sh/@paper-design/shaders-react@0.0.71?external=react,react-dom"
-            }
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.2.0",
+          "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+          "react/jsx-dev-runtime": "https://esm.sh/react@18.2.0/jsx-dev-runtime",
+          "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+          "@paper-design/shaders-react": "https://esm.sh/@paper-design/shaders-react@0.0.71?external=react,react-dom"
         }
+      }
     </script>
     <script type="module" src="hero-react.js"></script>
-</head>
-
-<body>
-    <nav class="navbar navbar-delayed" data-delayed="hero">
-        <a href="index.html" class="nav-brand">purpledan</a>
-        <div class="nav-actions">
-            <a href="#about" class="nav-icon-link" data-tip="About Me" aria-label="Go to About section">
-                <span class="material-symbols-outlined">person</span>
-            </a>
-            <a href="#skills" class="nav-icon-link" data-tip="Skills" aria-label="Go to Skills section">
-                <span class="material-symbols-outlined">code</span>
-            </a>
-            <a href="#projects" class="nav-icon-link" data-tip="Projects" aria-label="Go to Projects section">
-                <span class="material-symbols-outlined">deployed_code</span>
-            </a>
-            <a href="#socials" class="nav-icon-link" data-tip="Connect" aria-label="Go to Connect section">
-                <span class="material-symbols-outlined">groups</span>
-            </a>
-            <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
-        </div>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <nav class="navbar wrap" aria-label="Main navigation">
+      <a class="nav-brand" href="index.html">purpledan</a>
+      <div class="nav-actions">
+        <a href="#projects">Projects</a>
+        <a href="#socials">Contact</a>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Switch color theme"
+        >
+          <img src="assets/dark-mode.svg" alt="" />
+        </button>
+      </div>
     </nav>
-
-    <section class="hero">
-        <div id="hero-react-bg" class="hero-shader-wrap" aria-hidden="true"></div>
-        <h1>Hi, I'm <span class="hero-name">purpledan</span>
-        </h1>
-        <p class="subtitle">Roblox Developer</p>
-        <div class="scroll-down" onclick="scrollToContent()">
-            <button>View My Work</button>
-            <div class="arrow">↓</div>
+    <main id="main" class="wrap">
+      <header class="intro">
+        <div class="hero-art" aria-hidden="true">
+          <div id="hero-react-bg" class="hero-shader-wrap"></div>
         </div>
-    </section>
-
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>I’m <strong>purpledan.</strong> I code Roblox games and occasionally build websites.
-                    I value perfection and excellence in my work, but I also recognize that I don’t know everything -
-                    and I embrace every learning opportunity to its fullest.
-                    I started coding when my school put a blocking extension on my Chromebook.
-                    I got frustrated that I couldn’t access CoolMathGames in class anymore, so I learned website
-                    building with GitHub to create unblocked sites for my classmates.
-                    At the same time, Roblox was my favorite game, and I realized I could try making better games then
-                    the ones I was playing.
-                    That’s when I started coding Roblox games.
-                    Even today, I’m still looking for ways to improve.
-
-                    I have been coding Roblox games for over 5 years, and I have experience with both front-end and back-end development.
-                </p>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item"
-                    style="--skill-bg-image: url('assets/robloxstudio.svg'); --skill-bg-size: 60%; --skill-bg-position: center; --skill-bg-repeat: no-repeat;">
-                    <div class="skill-content">
-                        <h3>Roblox Studio</h3>
-                        <p>Game development & scripting</p>
-                    </div>
-                </div>
-                <div class="skill-item"
-                    style="--skill-bg-image: url('assets/luau.svg'); --skill-bg-size: 60%; --skill-bg-position: center; --skill-bg-repeat: no-repeat;">
-                    <div class="skill-content">
-                        <h3>Luau</h3>
-                        <p>Programming language</p>
-                    </div>
-                </div>
-                <div class="skill-item"
-                    style="--skill-bg-image: url('assets/html5.svg'), url('assets/javascript.svg'), url('assets/css.svg'); --skill-bg-size: 25% 100%, 25% 100%, 25% 100%; --skill-bg-position: left 10px center, center center, right 10px center; --skill-bg-repeat: no-repeat, no-repeat, no-repeat;">
-                    <div class="skill-content">
-                        <h3>Web Development</h3>
-                        <p>HTML, JavaScript, CSS</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Exodo Wiki</h3>
-                    <p>A wiki I helped to code and customize for the Roblox game Exodo.</p>
-                    <a href="projects/exodo-wiki.html" class="project-link">View Project →</a>
-                </div>
-                <div class="project-card">
-                    <h3>War of the Worlds</h3>
-                    <p>I helped contribute an admin command line system with global and server polls and announcements.</p>
-                    <a href="projects/war-of-the-worlds.html" class="project-link">View Project →</a>
-                </div>
-                <div class="project-card">
-                    <h3>Dynamic Reverb Test</h3>
-                    <p>A personal project. Dynamically adjusts the reverb you hear based on the material and size of your environment.</p>
-                    <a href="projects/dynamic-reverb-test.html" class="project-link">View Project →</a>
-                </div>
-            </div>
-        </section>
-    </div>
-    <section id="socials">
-        <h2>Connect With Me</h2>
-        <div class="socials-grid">
-            <div class="social-card github">
-                <div class="social-icon">
-                    <img src="assets/github.svg" alt="Github Icon" width="40" height="40">
-                </div>
-                <div class="social-info">
-                    <h3>GitHub</h3>
-                    <a href="https://github.com/purpledanx" target="_blank">
-                        Check out my code
-                    </a>
-                    <p>(not a lot)</p>
-                </div>
-            </div>
-            <div class="social-card roblox">
-                <div class="social-icon">
-                    <img src="assets/roblox.svg" alt="Roblox Icon" width="40" height="40">
-                </div>
-                <div class="social-info">
-                    <h3>Roblox</h3>
-                    <a href="https://www.roblox.com/users/1557805206/profile" target="_blank">
-                        View my profile
-                    </a>
-                </div>
-            </div>
-            <div class="social-card discord">
-                <div class="social-icon">
-                    <img src="assets/discord.svg" alt="Discord Icon" width="40" height="40">
-                </div>
-                <div class="social-info">
-                    <h3>Discord</h3>
-                    <p>Username: purpledanx</p>
-                </div>
-            </div>
-            <div class="social-card mail">
-                <div class="social-icon">
-                    <img src="assets/gmail.svg" alt="Gmail Icon" width="40" height="40">
-                </div>
-                <div class="social-info">
-                    <h3>Email</h3>
-                    <a href="mailto:purpledanielx@gmail.com" target="_blank">
-                        purpledanielx@gmail.com
-                    </a>
-                    <p>(I don't check my mail often)</p>
-                </div>
-            </div>
+        <h1>Hi, I'm purpledan.</h1>
+        <p>I code Roblox games and occasionally build websites.</p>
+      </header>
+      <section id="projects" class="work" aria-labelledby="work-heading">
+        <h2 id="work-heading">Projects</h2>
+        <a class="project-row" href="projects/exodo-wiki.html">
+          <div>
+            <h3>Exodo Wiki</h3>
+            <p>Custom layouts and page templates for a Roblox game wiki.</p>
+          </div>
+          <img src="assets/arrow-forwards.svg" alt="" />
+        </a>
+        <a class="project-row" href="projects/war-of-the-worlds.html">
+          <div>
+            <h3>War of the Worlds</h3>
+            <p>Admin commands, polls, and cross-server announcements.</p>
+          </div>
+          <img src="assets/arrow-forwards.svg" alt="" />
+        </a>
+        <a class="project-row" href="projects/dynamic-reverb-test.html">
+          <div>
+            <h3>Dynamic Reverb Test</h3>
+            <p>Reverb that changes with the room's size and materials.</p>
+          </div>
+          <img src="assets/arrow-forwards.svg" alt="" />
+        </a>
+      </section>
+      <section id="about" class="about">
+        <h2>About</h2>
+        <p>
+          I've been coding on Roblox for over five years, working on both
+          front-end and back-end systems. I started with websites, then began
+          making games on Roblox.
+        </p>
+        <p id="skills" class="skills">
+          Luau, Roblox Studio, HTML, CSS, JavaScript.
+        </p>
+      </section>
+      <section id="socials" class="contact">
+        <h2>Contact</h2>
+        <div class="contact-links">
+          <a
+            href="https://github.com/purpledanx"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.roblox.com/users/1557805206/profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Roblox</a
+          >
+          <a href="mailto:purpledanielx@gmail.com">Email</a>
+          <span>Discord: purpledanx</span>
         </div>
-    </section>
-</body>
-
+        <p class="contact-note">I don't check email often.</p>
+      </section>
+    </main>
+    <footer class="footer wrap"><p>&copy; 2026 purpledan</p></footer>
+  </body>
 </html>
