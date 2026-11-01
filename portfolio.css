@@ -1,0 +1,91 @@
+.portfolio { --margin: clamp(20px, 3vw, 56px); --rule: 2px solid currentColor; }
+.portfolio .navbar { min-height: 88px; border-bottom: var(--rule); }
+.portfolio .nav-brand { font-size: 26px; }
+.portfolio .nav-actions { gap: clamp(20px, 3vw, 48px); }
+.poster { padding-block: 36px 48px; }
+.poster-stage { position: relative; }
+.hero-render { position: absolute; top: 0; right: 0; width: 43%; height: 46%; overflow: hidden; background: #000; }
+.hero-render img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; transform: translate(var(--look-x, 0px), calc(var(--look-y, 0px) + var(--hero-drift, 0px))) scale(1.16); }
+.poster h1 { font: 400 23.6vw/.78 Imbue, Georgia, serif; letter-spacing: -.025em; text-transform: uppercase; }
+.poster h1 span { display: block; }
+.poster h1 span + span { margin-top: .035em; }
+.poster-bottom { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-top: 36px; }
+.poster-bottom p { max-width: 40ch; font-size: clamp(20px, 1.65vw, 24px); line-height: 1.4; }
+.portfolio .button { min-height: 56px; padding: 16px 24px; gap: 40px; font-weight: 500; }
+.portfolio .work-index { background: var(--inverse); color: var(--night); padding-block: 44px 0; }
+.portfolio .section-heading { margin-bottom: 32px; align-items: center; }
+.portfolio .section-heading h2, .portfolio .contact-top h2 { font: 500 clamp(24px, 2vw, 32px)/1.15 "Albert Sans", Arial, sans-serif; text-transform: none; letter-spacing: -.035em; }
+.portfolio .section-heading p { font-size: 17px; }
+.portfolio .work-references li { border-top: var(--rule); }
+.portfolio .work-references li + li { margin: 0; }
+.portfolio .work-references a { grid-template-columns: minmax(0, 1fr) 76px; gap: 14px 24px; padding: 28px 0 30px; background: transparent; color: inherit; }
+.portfolio .work-title { font-size: clamp(46px, 7.75vw, 140px); letter-spacing: -.025em; line-height: .9; }
+.portfolio .work-description { grid-column: 1; grid-row: 2; font-size: 17px; }
+.portfolio .work-arrow { grid-column: 2; grid-row: 1 / 3; font: 400 64px/1 "Albert Sans", Arial, sans-serif; }
+.portfolio .work-references a:hover, .portfolio .work-references a:focus-visible { color: #1749bc; background: transparent; }
+.portfolio .work-references a:focus-visible { outline-color: #1749bc; outline-offset: -3px; }
+.profile { display: grid; grid-template-columns: 1fr 1fr; border-top: var(--rule); border-bottom: var(--rule); }
+.portrait { overflow: hidden; min-height: 620px; background: #000; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% center; transform: translateY(var(--portrait-drift, 0px)) scale(1.12); }
+.profile-copy { display: flex; flex-direction: column; padding: clamp(32px, 4vw, 72px); border-left: var(--rule); }
+.profile-copy h2 { font-size: clamp(54px, 6vw, 108px); line-height: .9; }
+.profile-story { max-width: 40ch; margin-top: 40px; font-size: clamp(18px, 1.5vw, 24px); }
+.profile-story .text-link { font-size: 17px; }
+.profile-tools { margin-top: auto; padding-top: 48px; font-size: 17px; color: var(--muted); }
+.portfolio .contact { padding: 40px 0 24px; }
+.portfolio .contact-top { position: relative; z-index: 1; }
+.portfolio .contact-name { font-size: 27.5vw; margin: 42px 0 36px; line-height: .83; letter-spacing: -.03em; user-select: all; }
+.contact-actions { display: flex; justify-content: space-between; align-items: start; gap: 32px; padding-bottom: 34px; }
+.copy-control { max-width: 38ch; }
+#copy-status { min-height: 1.55em; margin-top: 12px; font-size: 15px; }
+.portfolio .contact-links { gap: clamp(24px, 4vw, 64px); font-size: clamp(18px, 2vw, 28px); }
+.portfolio .contact-links a { display: inline-flex; min-height: 56px; align-items: center; }
+.portfolio .contact-bottom { padding-top: 22px; border-top: var(--rule); }
+.portfolio .contact-note { width: auto; }
+@media (min-width: 1600px) { .poster h1 { font-size: 22vw; } }
+@media (max-width: 900px) {
+  .poster { padding-top: 40px; }
+  .poster h1 { font-size: 24vw; }
+  .poster-bottom p { max-width: 27ch; }
+  .profile { grid-template-columns: 1fr 1.1fr; }
+  .portrait { min-height: 580px; }
+  .profile-copy { padding: 32px 24px; }
+  .profile-copy h2 { font-size: 7vw; }
+  .profile-story { font-size: 18px; margin-top: 28px; }
+  .portfolio .work-title { font-size: 8vw; }
+  .contact-actions { flex-wrap: wrap; }
+}
+@media (max-width: 600px) {
+  .portfolio .navbar { min-height: 76px; gap: 12px; }
+  .portfolio .nav-brand { font-size: 20px; }
+  .portfolio .nav-actions { gap: 15px; font-size: 14px; }
+  .poster { padding-block: 40px 32px; }
+  .poster h1 { font-size: 23.3vw; line-height: .85; }
+  .poster h1 span + span { margin-top: .02em; }
+  .poster-bottom { display: block; margin-top: 28px; }
+  .poster-bottom p { max-width: 31ch; font-size: 20px; }
+  .poster-bottom .button { margin-top: 24px; }
+  .portfolio .button { padding: 14px 20px; gap: 32px; }
+  .portfolio .work-index { padding-top: 28px; }
+  .portfolio .section-heading { display: block; margin-bottom: 24px; }
+  .portfolio .section-heading p { margin-top: 10px; font-size: 16px; }
+  .portfolio .work-references a { grid-template-columns: minmax(0, 1fr) 28px; padding-block: 24px; gap: 12px 16px; }
+  .portfolio .work-title { font-size: clamp(39px, 11vw, 64px); line-height: .98; }
+  .portfolio .work-description { font-size: 16px; max-width: 26ch; }
+  .portfolio .work-arrow { font-size: 32px; }
+  .profile { display: flex; flex-direction: column; }
+  .portrait { min-height: 0; height: 390px; }
+  .profile-copy { border-left: 0; border-top: var(--rule); padding: 32px var(--margin) 36px; }
+  .profile-copy h2 { font-size: clamp(52px, 14vw, 80px); }
+  .profile-story { font-size: 20px; }
+  .profile-tools { padding-top: 30px; }
+  .portfolio .contact { padding-top: 30px; }
+  .portfolio .contact-top { display: flex; gap: 16px; align-items: baseline; }
+  .portfolio .contact-top h2 { font-size: 22px; }
+  .portfolio .contact-top p { font-size: 14px; margin: 0; }
+  .portfolio .contact-name { margin: 32px 0 28px; font-size: 26vw; }
+  .contact-actions { gap: 8px; padding-bottom: 24px; }
+  .portfolio .contact-links { order: 0; width: 100%; justify-content: space-between; font-size: 20px; gap: 16px; }
+  .portfolio .contact-bottom { align-items: start; gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) { .portrait img, .hero-render img { transform: none; } }

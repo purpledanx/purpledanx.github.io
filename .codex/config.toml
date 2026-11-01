@@ -1,0 +1,13 @@
+[mcp_servers.bili]
+command = "node"
+args = [
+  "C:/Users/danny/.local/node_modules/billion-context/dist/mcp.js"
+]
+
+[mcp_servers.motion]
+type = "http"
+url = "https://mcp.motion.dev"
+
+[mcp_servers.motion-plus]
+type = "http"
+url = "https://mcp.motion.dev/plus"

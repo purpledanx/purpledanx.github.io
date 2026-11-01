@@ -1,17 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
-  const heroImage = document.querySelector(".hero-scene > img");
-  if (heroImage && !reducedMotion.matches) {
-    heroImage.animate([{ opacity: .45 }, { opacity: 1 }], { duration: 1100, easing: "ease-out" });
+  const poster = document.querySelector(".poster");
+  const heroRender = document.querySelector(".hero-render");
+  if (poster && heroRender) {
+    let frame = 0;
+    let lookX = 0;
+    let lookY = 0;
+    const renderHero = () => {
+      frame = 0;
+      const bounds = poster.getBoundingClientRect();
+      const drift = reducedMotion.matches ? 0 : Math.max(-12, Math.min(12, -bounds.top * .04));
+      heroRender.style.setProperty("--hero-drift", `${drift}px`);
+      heroRender.style.setProperty("--look-x", `${reducedMotion.matches ? 0 : lookX}px`);
+      heroRender.style.setProperty("--look-y", `${reducedMotion.matches ? 0 : lookY}px`);
+    };
+    const queueHero = () => {
+      if (!frame) frame = requestAnimationFrame(renderHero);
+    };
+    poster.addEventListener("pointermove", (event) => {
+      if (event.pointerType !== "mouse" || reducedMotion.matches) return;
+      const bounds = poster.getBoundingClientRect();
+      lookX = ((event.clientX - bounds.left) / bounds.width - .5) * 16;
+      lookY = ((event.clientY - bounds.top) / bounds.height - .5) * 12;
+      queueHero();
+    });
+    poster.addEventListener("pointerleave", () => { lookX = 0; lookY = 0; queueHero(); });
+    addEventListener("scroll", queueHero, { passive: true });
+    addEventListener("resize", queueHero);
+    reducedMotion.addEventListener("change", () => { lookX = 0; lookY = 0; queueHero(); });
+    queueHero();
   }
-  const hero = document.querySelector(".hero");
-  if (hero && heroImage) {
+  const portrait = document.querySelector(".portrait");
+  if (portrait) {
     let frame = 0;
     const renderParallax = () => {
       frame = 0;
-      const bounds = hero.getBoundingClientRect();
-      const travel = reducedMotion.matches ? 0 : Math.min(Math.max(-bounds.top, 0), bounds.height) * .18;
-      hero.style.setProperty("--hero-drift", `${travel}px`);
+      const bounds = portrait.getBoundingClientRect();
+      const progress = reducedMotion.matches ? 0 : Math.max(-1, Math.min(1, (innerHeight / 2 - bounds.top - bounds.height / 2) / innerHeight));
+      portrait.style.setProperty("--portrait-drift", `${progress * 24}px`);
     };
     const queueParallax = () => {
       if (!frame) frame = requestAnimationFrame(renderParallax);
@@ -22,19 +48,76 @@ document.addEventListener("DOMContentLoaded", () => {
     queueParallax();
   }
 
+  const copyButton = document.querySelector("#copy-discord");
+  const discordHandle = document.querySelector("#discord-handle");
+  const copyStatus = document.querySelector("#copy-status");
+  if (copyButton && discordHandle && copyStatus) {
+    copyButton.hidden = false;
+    copyButton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(discordHandle.textContent.trim());
+        copyStatus.textContent = "Copied purpledanx.";
+      } catch {
+        const handle = document.createElement("span");
+        handle.textContent = discordHandle.textContent.trim();
+        copyStatus.replaceChildren("Copy unavailable. Copy this handle manually: ", handle);
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(handle);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+    });
+  }
+
   if ("IntersectionObserver" in window) {
+    const activeEntrances = new Map();
+    const visibleEntrances = new Set();
     const entrances = new IntersectionObserver((entries) => {
+      const groups = new Map();
       entries.forEach(({ isIntersecting, target }) => {
-        if (!isIntersecting) return;
-        entrances.unobserve(target);
-        if (reducedMotion.matches) return;
-        target.animate([
-          { opacity: .25, transform: "translateY(20px)" },
-          { opacity: 1, transform: "translateY(0)" },
-        ], { duration: 620, easing: "cubic-bezier(.2,.7,.2,1)" });
+        if (!isIntersecting) {
+          visibleEntrances.delete(target);
+          activeEntrances.get(target)?.cancel();
+          return;
+        }
+        if (visibleEntrances.has(target)) return;
+        visibleEntrances.add(target);
+        if (reducedMotion.matches || target.contains(document.activeElement)) return;
+        activeEntrances.get(target)?.cancel();
+        const group = target.closest("header, section, footer") || target.parentElement;
+        const order = groups.get(group) || 0;
+        groups.set(group, order + 1);
+        const isRow = target.matches(".work-references > li");
+        const isName = target.matches(".contact-name");
+        const isHeading = target.matches("h2, h1 > span");
+        const from = isName ? "translateY(36px) scale(.98)"
+          : isRow ? "translateX(-24px)"
+          : isHeading ? "translateX(-16px)"
+          : "translateY(18px)";
+        const animation = target.animate([
+          { opacity: .35, transform: from },
+          { opacity: 1, transform: "none" },
+        ], {
+          duration: isName ? 700 : isHeading ? 560 : 480,
+          delay: Math.min(order, 3) * 65,
+          easing: "cubic-bezier(.16,1,.3,1)",
+          fill: "backwards",
+        });
+        activeEntrances.set(target, animation);
+        const release = () => {
+          if (activeEntrances.get(target) === animation) activeEntrances.delete(target);
+        };
+        animation.addEventListener("finish", release, { once: true });
+        animation.addEventListener("cancel", release, { once: true });
       });
-    }, { threshold: .12 });
+    }, { threshold: .12, rootMargin: "0px 0px -24px 0px" });
     document.querySelectorAll("[data-enter]").forEach((element) => entrances.observe(element));
+    document.addEventListener("focusin", (event) => {
+      for (const [element, animation] of activeEntrances) {
+        if (element.contains(event.target)) animation.cancel();
+      }
+    });
     reducedMotion.addEventListener("change", () => {
       if (reducedMotion.matches) document.getAnimations().forEach((animation) => animation.cancel());
     });
@@ -49,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.hidden) document.querySelectorAll("video").forEach((video) => video.pause());
   });
 
-  document.querySelectorAll(".gallery-slide img, .gallery-slide video, .project-visual img, .project-visual video, .hero-scene img, .wiki-frames img").forEach((media) => {
+  document.querySelectorAll(".gallery-slide img, .gallery-slide video, .project-visual img, .project-visual video, .portrait img, .wiki-frames img").forEach((media) => {
     const status = document.createElement("p");
     status.className = "media-status";
     status.setAttribute("role", "status");

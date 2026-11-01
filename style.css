@@ -16,6 +16,7 @@
   --lead: clamp(1.25rem, 1.7vw, 1.625rem);
   --heading: clamp(1.75rem, 2.5vw, 2.5rem);
   --margin: clamp(20px, 2.25vw, 40px);
+  --ease-settle: cubic-bezier(.16, 1, .3, 1);
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 2rem; scrollbar-width: none; }
@@ -43,8 +44,8 @@ img, video { display: block; max-width: 100%; }
 .nav-actions a { display: flex; min-height: 44px; align-items: center; }
 .hero { position: relative; min-height: calc(100svh - 88px); display: flex; align-items: end; overflow: hidden; background: #000; color: var(--inverse); }
 .hero-scene { position: absolute; inset: 0; overflow: hidden; }
-.hero-scene > img { width: 100%; height: 100%; object-fit: cover; object-position: center; transform: translate3d(0, var(--hero-drift, 0px), 0) scale(1.08); }
-.hero-title { position: relative; padding: 18px var(--margin) 30px; width: 100%; background: transparent; }
+.hero-scene > img { width: 100%; height: 100%; object-fit: cover; object-position: center; transform: translate3d(0, var(--hero-drift, 0px), 0) scale(1.18); }
+.hero-title { position: relative; padding: 18px var(--margin) 30px; width: 100%; background: transparent; transform: translateY(var(--hero-type-drift, 0px)); }
 .hero-title h1, .contact-name { font-family: Imbue, Georgia, serif; font-weight: 400; text-transform: uppercase; font-size: 30.8vw; letter-spacing: -.025em; line-height: .78; }
 .hero-title h1 { margin: 0 0 32px; }
 .hero-bottom { display: flex; justify-content: space-between; align-items: end; gap: 32px; }
@@ -127,6 +128,53 @@ img, video { display: block; max-width: 100%; }
 .button:active, button:active:enabled { transform: translateY(2px); }
 .project-visual img, .wiki-frames img { transition: transform 600ms ease; }
 @media (hover: hover) { a.project-visual:hover img, .wiki-frames a:hover img { transform: scale(1.025); } }
+@media (prefers-reduced-motion: no-preference) {
+  .portfolio .hero-title h1 { animation: name-arrive 760ms var(--ease-settle) both; }
+  .portfolio .hero-bottom { animation: copy-arrive 540ms var(--ease-settle) 100ms backwards; }
+  .portfolio .hero-scene { animation: scene-arrive 900ms ease-out both; }
+  .portfolio .nav-actions a, .portfolio .contact-links a { position: relative; }
+  .portfolio .nav-actions a::after, .portfolio .contact-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 7px;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 220ms var(--ease-settle);
+  }
+  .portfolio .contact-links a { text-decoration: none; }
+  .portfolio .work-references a > span { transition: transform 280ms var(--ease-settle); }
+  .portfolio .button > span { transition: transform 240ms var(--ease-settle); }
+  .portfolio .nav-actions a:focus-visible::after, .portfolio .contact-links a:focus-visible::after { transform: scaleX(1); }
+  .portfolio .work-references a:focus-visible > :not(:last-child) { transform: translateX(8px); }
+  .portfolio .work-references a:focus-visible > :last-child { transform: translate(3px, -3px); }
+  .portfolio .button:focus-visible > span { transform: translateY(4px); }
+  .portfolio .work-references a:active { transform: translateY(2px); }
+  .portfolio .text-link { transition: text-underline-offset 180ms ease; }
+  .portfolio .text-link:focus-visible { text-underline-offset: .4em; }
+  @media (hover: hover) and (pointer: fine) {
+    .portfolio .nav-actions a:hover::after, .portfolio .contact-links a:hover::after { transform: scaleX(1); }
+    .portfolio .work-references a:hover > :not(:last-child) { transform: translateX(8px); }
+    .portfolio .work-references a:hover > :last-child { transform: translate(3px, -3px); }
+    .portfolio .button:hover > span { transform: translateY(4px); }
+    .portfolio .text-link:hover { text-underline-offset: .4em; }
+  }
+}
+@keyframes name-arrive {
+  from { opacity: .3; transform: translateY(22%) scaleY(.94); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes copy-arrive {
+  from { opacity: .4; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes scene-arrive {
+  from { opacity: .5; }
+  to { opacity: 1; }
+}
 @media (max-width: 900px) {
   .hero { min-height: 760px; }
   .project { grid-template-columns: 1.4fr 1fr; gap: 28px; margin-bottom: 100px; }

@@ -1,43 +1,31 @@
-# purpledan portfolio
+﻿# Web Prototype Taste Brutalist v2
 
-## Current direction
+## Direction
+Industrial-brutalist-ui, Swiss Industrial Print: structural rules, square controls, extreme type contrast. Adapted to the owner's forest green and Imbue serif identity. Taste direction: Type and nothing else, seed 114108714. Selected over the previous name-as-monument composition; no redraws. Static HTML/CSS/JavaScript.
 
-The owner requested an industrial-brutalist treatment while retaining the approved forest green, tall serif name, and supplied avatar render. The homepage is a personal introduction with text references to work. Project screenshots and demos live on the existing case-study pages.
+On this page, purpledan's cross-server tools, room-aware sound and wiki templates become a large printed work index. The actual titles and avatar carry the identity. Live action: copy the real Discord handle, with a manual-selection fallback.
 
-Taste composition retained: The name as a monument, seed 1811475559. The named industrial-brutalist-ui skill was not found in the local skill directories; no claim is made that it was loaded. Taste, Antislop core/UI/mobile/human, and Caveman were used for their relevant scope.
+## Subject inventory
+purpledan; Discord purpledanx; forest green; Imbue type; red-accent Roblox avatar; five-plus years of Roblox coding; War of the Worlds polls; MessagingService announcements; raycast room detection; Parallel Luau reverb; Exodo MediaWiki templates; website-to-game background.
 
-Audience: people evaluating purpledan's Roblox systems and web work.
-Dials: ENERGY 3 / RHYTHM 2 / MOTION 3.
+## Argument and copy deck
+- Opening: Roblox developer. I'm purpledan. I build Roblox systems, from cross-server tools to room-aware audio. Explore my work.
+- Work: Selected work. War of the Worlds — Cross-server polls & announcements. Dynamic Reverb Test — Audio that responds to the room. Exodo Wiki — A custom theme, layouts & templates. Existing project pages supply the demos and evidence.
+- About: Websites first. Then games. I started with websites, then began making games on Roblox. I've been coding on Roblox for over five years, working on both front-end and back-end systems. Luau / Roblox Studio / HTML / CSS / JavaScript. My GitHub.
+- Contact: Find me online. On Discord as purpledanx. Copy Discord handle. GitHub, Roblox, Email. I don't check email often.
 
-## Decisions
+## Composition and exceptions
+The revised opening pairs the two-line occupational statement with the owner's avatar in the space beside Roblox, a supporting sentence and blue action. The avatar responds to mouse position and scroll, with bounded movement inside its crop. Work inverts the green/offwhite pairing with oversized linked names and structural rules. About pairs the supplied portrait with biography. Contact returns to green and displays the full Discord handle.
 
-- Color: one fixed forest-green identity, requested by the owner. Theme controls and preference logic are removed across all pages.
-- Typography: Imbue preserves the owner's approved tall serif identity. Albert Sans carries descriptions and controls.
-- Layout: the render and name introduce the developer; the biography supplies context; a compact text index references three real project pages.
-- Industrial treatment: flat green fields, oversized type, square controls, and full-width text links give content direct hierarchy.
-- Imagery: the homepage uses only the owner's avatar render. No project images, videos, or wiki image band appear there.
-- Navigation: existing #projects links lead to the text index. The case-study routes and their galleries remain available.
-- Scrollbars: scrollbar chrome is hidden while native wheel, touch, and keyboard scrolling remain available.
-- Motion: the render travels at 18% of scroll distance through the hero, capped at the hero's height times 18%. A small image overscan supports the movement. Updates use a passive scroll listener and one requested animation frame, without changing native scroll behavior.
-- Accessibility: reduced motion removes the parallax transform and cancels entrance animation. Text remains visible without JavaScript.
-- Controls: focus indicators and 44px-or-larger navigation targets remain. Project reference rows are full links.
-- Accent: blue remains the single action/focus accent.
-- Media states: project galleries retain loading, error, and empty states.
+The requested industrial style authorizes structural 2px rules over Taste's border prohibition. Approved type and palette override the industrial skill's generic sans/light palette. The homepage avatar-only constraint overrides Taste's four-image/video floor. Galleries stay on their detail routes. No new assets, sample claims, external dependencies or invented evidence.
 
-## Copy and section argument
+## Interaction and access
+Native links, visible focus, 44px targets, keyboard-operable copy button, live status and manual-selection fallback. Text works without JavaScript. Entrances replay after leaving and returning to the viewport, including the opening text, image and button group. Repeated observer threshold notifications do not restart an entrance while it remains visible. Motion cancels with reduced motion. Both image drifts and mouse response are disabled with reduced motion. No scroll hijacking.
 
-Opening: purpledan. I develop Roblox systems, from cross-server tools to room-aware audio. The supplied avatar render makes the introduction personal. Action: Find my work.
+## Assets
+Only assets/images/hero-render.png (1774 × 887), the owner's render, and local Imbue and Albert Sans fonts.
 
-Biography: Code for games. The existing biography and skills explain the developer's background.
+## Verification
+Chrome screenshots reviewed at 1440, 768 and 390px. Interaction checks also cover 320px: all 17 entrances replay over two return-scroll cycles, hero mouse response, keyboard copying, clipboard-denied fallback, reduced motion on load and at runtime, section anchors, project routes and JavaScript-disabled content. No overflow, covered text or console errors. Native CSS/Web Animations suit the fixed entrances and control feedback; no animation dependency added. Motion skill guidance reviewed.
 
-Work reference: Find my work. War of the Worlds, Dynamic Reverb Test, and Exodo Wiki are linked by name and a short description. Evidence and footage are available on their respective pages.
-
-Contact: Find me online. The actual Discord handle and existing GitHub, Roblox, and email links provide contact routes.
-
-## Supplied assets
-
-The original me.png is copied unchanged to assets/images/hero-render.png (1774 × 887). Its framing is controlled by .hero-scene in style.css. Font files and SIL Open Font Licenses are in assets/fonts/.
-
-## Explicit user overrides
-
-The request for no project imagery on the homepage supersedes Taste's four-image floor and inline-demo recommendation. The request to remove light/dark controls supersedes the optional-theme guideline. The approved typography remains despite conventional brutalist styles often favoring sans-serif type. No additional assets, sample claims, or placeholder content are needed.
+Inspector: zero failures, two visual advisories (type-size variety and open space beside short project names). These are documented in `.taste-skill/brutalist-v2/critique.md`, alongside the owner-authorized exceptions. No claim of a MotionScore performance audit.

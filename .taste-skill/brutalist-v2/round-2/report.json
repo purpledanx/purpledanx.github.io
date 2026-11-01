@@ -1,0 +1,1997 @@
+{
+ "url": "index.html",
+ "at": "2026-10-30T01:29:01.617Z",
+ "allow": [
+  "hairline",
+  "few-pictures",
+  "no-footage",
+  "still-page"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.56,
+    0.89,
+    0.73,
+    0.67
+   ],
+   "motion": {
+    "elements": 4,
+    "css": 4,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 2846,
+     "screens": 3.2,
+     "words": 122,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "hero-render.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "ROBLOX DEVELOPER.",
+     "words": 2,
+     "chars": 17,
+     "lines": 2,
+     "size": 339.8,
+     "vw": 23.6,
+     "font": "Imbue",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 0.78,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.94,
+     "top": 124,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "ROBLOX DEVELOPER.",
+     "words": 2,
+     "lines": 2,
+     "size": 339.8,
+     "font": "Imbue"
+    },
+    "headings": [
+     {
+      "text": "ROBLOX DEVELOPER.",
+      "words": 2,
+      "chars": 17,
+      "lines": 2,
+      "size": 339.8,
+      "vw": 23.6,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.78,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 124,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Selected work",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 28.8,
+      "vw": 2,
+      "font": "Albert Sans",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.12,
+      "top": 861,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "WAR OF THE WORLDS",
+      "words": 4,
+      "chars": 17,
+      "lines": 1,
+      "size": 111.6,
+      "vw": 7.8,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 956,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "↗",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Albert Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.03,
+      "top": 994,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "DYNAMIC REVERB TEST",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 111.6,
+      "vw": 7.8,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 1156,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "↗",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Albert Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.03,
+      "top": 1195,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "EXODO WIKI",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 111.6,
+      "vw": 7.8,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 1357,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "↗",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Albert Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.03,
+      "top": 1396,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "WEBSITES FIRST. THEN GAMES.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 86.4,
+      "vw": 6,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.42,
+      "top": 1588,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Find me online",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 28.8,
+      "vw": 2,
+      "font": "Albert Sans",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.13,
+      "top": 2209,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "PURPLEDANX",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 396,
+      "vw": 27.5,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.03,
+      "leading": 0.83,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 2284,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "GitHub ↗",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Albert Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.08,
+      "top": 2649,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Roblox ↗",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Albert Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.08,
+      "top": 2649,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Email ↗",
+      "words": 2,
+      "chars": 7,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "Albert Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.07,
+      "top": 2649,
+      "tag": "a",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 14,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 7,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Albert Sans",
+       "share": 0.85,
+       "mono": false
+      },
+      {
+       "family": "Imbue",
+       "share": 0.15,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      17,
+      22,
+      24,
+      26,
+      28,
+      29,
+      64,
+      86,
+      112,
+      340,
+      396
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Albert Sans",
+      "size": 21.6,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 12.1
+     },
+     "measureChars": 50,
+     "max": {
+      "size": 396,
+      "vw": 27.5,
+      "font": "Imbue",
+      "text": "purpledanx"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.15,
+     "centerShare": 0.03,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#1c3025",
+     "bodyBgHsl": {
+      "h": 147,
+      "s": 0.26,
+      "l": 0.15
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#edf0e6",
+       "top": 817,
+       "hsl": {
+        "h": 78,
+        "s": 0.25,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#000000",
+       "top": 1530,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      },
+      {
+       "color": "#1c3025",
+       "top": 2169,
+       "hsl": {
+        "h": 147,
+        "s": 0.26,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#edf0e6",
+       "share": 0.6
+      },
+      {
+       "color": "#1c3025",
+       "share": 0.24
+      },
+      {
+       "color": "#c0cebf",
+       "share": 0.06
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.05
+      },
+      {
+       "color": "#c2ccc5",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#2860e1",
+      "hsl": {
+       "h": 222,
+       "s": 0.76,
+       "l": 0.52
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 0,
+     "height": 58,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Explore my work ↓"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 4,
+     "fixed": false,
+     "height": 88,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "albert sans",
+     "imbue"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 2846,
+    "margins": {
+     "left": 43,
+     "right": 43
+    },
+    "sections": [
+     {
+      "sel": "header.poster.wrap",
+      "tag": "header",
+      "top": 88,
+      "height": 729,
+      "words": 18,
+      "media": 0,
+      "middle": 98,
+      "heading": {
+       "text": "developer.",
+       "size": 340,
+       "tag": "h1"
+      },
+      "left": 43,
+      "right": 116,
+      "textLeft": 43,
+      "textRight": 116,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#projects.work-index",
+      "tag": "section",
+      "top": 817,
+      "height": 711,
+      "words": 27,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "War of the Worlds",
+       "size": 112,
+       "tag": "span"
+      },
+      "left": 43,
+      "right": 735,
+      "textLeft": 43,
+      "textRight": 735,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.profile",
+      "tag": "section",
+      "top": 1528,
+      "height": 641,
+      "words": 44,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Websites first.",
+       "size": 86,
+       "tag": "h2"
+      },
+      "left": 780,
+      "right": 120,
+      "textLeft": 780,
+      "textRight": 120,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer#socials.contact",
+      "tag": "footer",
+      "top": 2169,
+      "height": 677,
+      "words": 24,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "purpledanx",
+       "size": 396,
+       "tag": "p"
+      },
+      "left": 43,
+      "right": 43,
+      "textLeft": 43,
+      "textRight": 43,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "ROBLOX DEVELOPER.",
+      "size": 340,
+      "top": 124,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 43,
+      "n": 4
+     },
+     {
+      "x": 780,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 7,
+    "bodySize": 22,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.14,
+    "voidBox": {
+     "x": 1140,
+     "y": 120,
+     "w": 300,
+     "h": 600
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.73,
+    0.72,
+    0.62
+   ],
+   "motion": {
+    "elements": 4,
+    "css": 4,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 2264,
+     "screens": 2.2,
+     "words": 122,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "hero-render.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "ROBLOX DEVELOPER.",
+     "words": 2,
+     "chars": 17,
+     "lines": 2,
+     "size": 184.3,
+     "vw": 24,
+     "font": "Imbue",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 0.78,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.94,
+     "top": 128,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "ROBLOX DEVELOPER.",
+     "words": 2,
+     "lines": 2,
+     "size": 184.3,
+     "font": "Imbue"
+    },
+    "headings": [
+     {
+      "text": "purpledan",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 26,
+      "vw": 3.4,
+      "font": "Albert Sans",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.14,
+      "top": 23,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "ROBLOX DEVELOPER.",
+      "words": 2,
+      "chars": 17,
+      "lines": 2,
+      "size": 184.3,
+      "vw": 24,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.78,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 128,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "WAR OF THE WORLDS",
+      "words": 4,
+      "chars": 17,
+      "lines": 1,
+      "size": 61.4,
+      "vw": 8,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.81,
+      "top": 724,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "↗",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 64,
+      "vw": 8.3,
+      "font": "Albert Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.06,
+      "top": 739,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "DYNAMIC REVERB TEST",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 61.4,
+      "vw": 8,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.81,
+      "top": 879,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "↗",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 64,
+      "vw": 8.3,
+      "font": "Albert Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.06,
+      "top": 895,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "EXODO WIKI",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 61.4,
+      "vw": 8,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.81,
+      "top": 1035,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "↗",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 64,
+      "vw": 8.3,
+      "font": "Albert Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.06,
+      "top": 1051,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "WEBSITES FIRST. THEN GAMES.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 53.8,
+      "vw": 7,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.46,
+      "top": 1194,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "PURPLEDANX",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 211.2,
+      "vw": 27.5,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.03,
+      "leading": 0.83,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 1856,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 7,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Albert Sans",
+       "share": 0.85,
+       "mono": false
+      },
+      {
+       "family": "Imbue",
+       "share": 0.15,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      17,
+      18,
+      20,
+      24,
+      26,
+      54,
+      61,
+      64,
+      184,
+      211
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Albert Sans",
+      "size": 18,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 12.1
+     },
+     "measureChars": 39,
+     "max": {
+      "size": 211.2,
+      "vw": 27.5,
+      "font": "Imbue",
+      "text": "purpledanx"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.15,
+     "centerShare": 0.03,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#1c3025",
+     "bodyBgHsl": {
+      "h": 147,
+      "s": 0.26,
+      "l": 0.15
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#edf0e6",
+       "top": 590,
+       "hsl": {
+        "h": 78,
+        "s": 0.25,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#1c3025",
+       "top": 1744,
+       "hsl": {
+        "h": 147,
+        "s": 0.26,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#edf0e6",
+       "share": 0.6
+      },
+      {
+       "color": "#1c3025",
+       "share": 0.24
+      },
+      {
+       "color": "#c0cebf",
+       "share": 0.06
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.05
+      },
+      {
+       "color": "#c2ccc5",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#2860e1",
+      "hsl": {
+       "h": 222,
+       "s": 0.76,
+       "l": 0.52
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 0,
+     "height": 58,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Explore my work ↓"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 4,
+     "fixed": false,
+     "height": 88,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "albert sans",
+     "imbue"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 2264,
+    "margins": {
+     "left": 23,
+     "right": 23
+    },
+    "sections": [
+     {
+      "sel": "header.poster.wrap",
+      "tag": "header",
+      "top": 88,
+      "height": 502,
+      "words": 19,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Roblox",
+       "size": 184,
+       "tag": "h1"
+      },
+      "left": 23,
+      "right": 96,
+      "textLeft": 23,
+      "textRight": 96,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#projects.work-index",
+      "tag": "section",
+      "top": 590,
+      "height": 570,
+      "words": 27,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "War of the Worlds",
+       "size": 61,
+       "tag": "span"
+      },
+      "left": 23,
+      "right": 380,
+      "textLeft": 23,
+      "textRight": 380,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.profile",
+      "tag": "section",
+      "top": 1160,
+      "height": 584,
+      "words": 44,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Websites first.",
+       "size": 54,
+       "tag": "h2"
+      },
+      "left": 392,
+      "right": 50,
+      "textLeft": 392,
+      "textRight": 50,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer#socials.contact",
+      "tag": "footer",
+      "top": 1744,
+      "height": 520,
+      "words": 24,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "purpledanx",
+       "size": 211,
+       "tag": "p"
+      },
+      "left": 23,
+      "right": 23,
+      "textLeft": 23,
+      "textRight": 23,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "ROBLOX DEVELOPER.",
+      "size": 184,
+      "top": 128,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 23,
+      "n": 4
+     },
+     {
+      "x": 392,
+      "n": 3
+     }
+    ],
+    "leftBlocks": 7,
+    "bodySize": 18,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.7,
+    0.9,
+    0.49
+   ],
+   "motion": {
+    "elements": 4,
+    "css": 4,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 2364,
+     "screens": 2.8,
+     "words": 122,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 2,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "hero-render.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "ROBLOX DEVELOPER.",
+     "words": 2,
+     "chars": 17,
+     "lines": 2,
+     "size": 90.9,
+     "vw": 23.3,
+     "font": "Imbue",
+     "weight": 400,
+     "tracking": -0.025,
+     "leading": 0.85,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 116,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "ROBLOX DEVELOPER.",
+     "words": 2,
+     "lines": 2,
+     "size": 90.9,
+     "font": "Imbue"
+    },
+    "headings": [
+     {
+      "text": "ROBLOX DEVELOPER.",
+      "words": 2,
+      "chars": 17,
+      "lines": 2,
+      "size": 90.9,
+      "vw": 23.3,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.85,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 116,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Selected work",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Albert Sans",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 524,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "WAR OF THE WORLDS",
+      "words": 4,
+      "chars": 17,
+      "lines": 1,
+      "size": 42.9,
+      "vw": 11,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.98,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 602,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "↗",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Albert Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.06,
+      "top": 635,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "DYNAMIC REVERB TEST",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 42.9,
+      "vw": 11,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.98,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 749,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "↗",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Albert Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.06,
+      "top": 771,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "EXODO WIKI",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 42.9,
+      "vw": 11,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.025,
+      "leading": 0.98,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 875,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "↗",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Albert Sans",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.06,
+      "top": 908,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "WEBSITES FIRST. THEN GAMES.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 54.6,
+      "vw": 14,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.015,
+      "leading": 0.9,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1422,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Find me online",
+      "words": 3,
+      "chars": 14,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Albert Sans",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 1944,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "PURPLEDANX",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 101.4,
+      "vw": 26,
+      "font": "Imbue",
+      "weight": 400,
+      "tracking": -0.03,
+      "leading": 0.83,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2003,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 11,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 7,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Albert Sans",
+       "share": 0.85,
+       "mono": false
+      },
+      {
+       "family": "Imbue",
+       "share": 0.15,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      17,
+      20,
+      22,
+      24,
+      32,
+      43,
+      55,
+      91,
+      101
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Albert Sans",
+      "size": 20,
+      "leading": 1.4,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 12.1
+     },
+     "measureChars": 35,
+     "max": {
+      "size": 101.4,
+      "vw": 26,
+      "font": "Imbue",
+      "text": "purpledanx"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.15,
+     "centerShare": 0.03,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#1c3025",
+     "bodyBgHsl": {
+      "h": 147,
+      "s": 0.26,
+      "l": 0.15
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#edf0e6",
+       "top": 496,
+       "hsl": {
+        "h": 78,
+        "s": 0.25,
+        "l": 0.92
+       }
+      },
+      {
+       "color": "#000000",
+       "top": 998,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      },
+      {
+       "color": "#1c3025",
+       "top": 1914,
+       "hsl": {
+        "h": 147,
+        "s": 0.26,
+        "l": 0.15
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#edf0e6",
+       "share": 0.6
+      },
+      {
+       "color": "#1c3025",
+       "share": 0.24
+      },
+      {
+       "color": "#c0cebf",
+       "share": 0.06
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.05
+      },
+      {
+       "color": "#c2ccc5",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#2860e1",
+      "hsl": {
+       "h": 222,
+       "s": 0.76,
+       "l": 0.52
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 2,
+     "radius": 0,
+     "height": 56,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Explore my work ↓"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 576
+      }
+     ]
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 4,
+     "fixed": false,
+     "height": 76,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "albert sans",
+     "imbue"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 2364,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "header.poster.wrap",
+      "tag": "header",
+      "top": 76,
+      "height": 420,
+      "words": 19,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Roblox",
+       "size": 91,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 25,
+      "textLeft": 20,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#projects.work-index",
+      "tag": "section",
+      "top": 496,
+      "height": 500,
+      "words": 27,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "War of the Worlds",
+       "size": 43,
+       "tag": "span"
+      },
+      "left": 20,
+      "right": 115,
+      "textLeft": 20,
+      "textRight": 115,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.profile",
+      "tag": "section",
+      "top": 996,
+      "height": 918,
+      "words": 44,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Websites first.",
+       "size": 55,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 29,
+      "textLeft": 20,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer#socials.contact",
+      "tag": "footer",
+      "top": 1914,
+      "height": 450,
+      "words": 24,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "purpledanx",
+       "size": 101,
+       "tag": "p"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "ROBLOX DEVELOPER.",
+      "size": 91,
+      "top": 116,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 7
+     }
+    ],
+    "leftBlocks": 7,
+    "bodySize": 20,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "12 different font sizes (14, 17, 22, 24, 26, 28, 29, 64, 86, 112, 340, 396).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "lopsided",
+   "width": 1440,
+   "message": "A section keeps its content on one side and leaves 735px of the width empty: \"War of the Worlds\".",
+   "fix": "Fill the other side with what the section has (its picture, a second column, the figure), or defend the void in one sentence.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "covered-text",
+   "width": 1440,
+   "message": "Large text lies under another element at some scroll position: \"Find me online\" (screen 4, 100% hidden)",
+   "fix": "Nothing may sit on top of a headline or statement. Move the picture, shorten the pinned run, or raise the text above it (z-index) and give it a ground."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\danny\\github\\purpledan.github.io\\.taste-skill\\brutalist-v2\\round-2\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\danny\\github\\purpledan.github.io\\.taste-skill\\brutalist-v2\\round-2\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\danny\\github\\purpledan.github.io\\.taste-skill\\brutalist-v2\\round-2\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\danny\\github\\purpledan.github.io\\.taste-skill\\brutalist-v2\\round-2\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\danny\\github\\purpledan.github.io\\.taste-skill\\brutalist-v2\\round-2\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\danny\\github\\purpledan.github.io\\.taste-skill\\brutalist-v2\\round-2\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

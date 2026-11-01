@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -16,72 +16,65 @@
   <link rel="icon" href="assets/roblox.svg" />
   <link rel="preload" href="assets/fonts/imbue-regular.ttf" as="font" type="font/ttf" crossorigin />
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="portfolio.css" />
+  <script src="script.js" defer></script>
 </head>
 <body class="portfolio">
   <a class="skip-link" href="#main">Skip to content</a>
   <nav class="navbar wrap" aria-label="Main navigation">
     <a class="nav-brand" href="index.html">purpledan</a>
-    <div class="nav-actions">
-      <a href="#projects">Work</a>
-      <a href="#about">About</a>
-      <a href="#socials">Contact</a>
-    </div>
+    <div class="nav-actions"><a href="#projects">Work</a><a href="#about">About</a><a href="#socials">Contact</a></div>
   </nav>
   <main id="main">
-    <header class="hero">
-      <div class="hero-scene">
-        <img src="assets/images/hero-render.png" width="1774" height="887" alt="purpledan's dark Roblox avatar render, with glasses and red accents" fetchpriority="high" />
+    <header class="poster wrap">
+      <div class="poster-stage">
+        <h1><span data-enter>Roblox</span><span data-enter>developer.</span></h1>
+        <div class="hero-render" data-enter><img src="assets/images/hero-render.png" width="1774" height="887" alt="" fetchpriority="high" /></div>
       </div>
-      <div class="hero-title wrap">
-        <h1>purpledan</h1>
-        <div class="hero-bottom">
-          <p>I develop Roblox systems, from cross-server tools to room-aware audio.</p>
-          <a class="button" href="#projects">Find my work <span aria-hidden="true">↓</span></a>
-        </div>
+      <div class="poster-bottom" data-enter>
+        <p>I'm purpledan. I build Roblox systems, from cross-server tools to room-aware audio.</p>
+        <a class="button" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
       </div>
     </header>
-    <section id="about" class="about wrap" aria-labelledby="about-heading">
-      <div>
-        <h2 id="about-heading" data-enter>Code for games.</h2>
-        <p class="about-tools" data-enter>Luau, Roblox Studio,<br />HTML, CSS, JavaScript.</p>
-      </div>
-      <div class="about-copy" data-enter>
-        <p>I started with websites, then began making games on Roblox.</p>
-        <p>I've been coding on Roblox for over five years, working on both front-end and back-end systems.</p>
-        <a class="text-link" href="https://github.com/purpledanx" target="_blank" rel="noopener noreferrer">My GitHub</a>
-      </div>
-    </section>
     <section id="projects" class="work-index" aria-labelledby="work-heading">
       <div class="wrap">
-        <div class="section-heading">
-          <h2 id="work-heading" data-enter>Find my work</h2>
-          <p data-enter>Details and demos live on the project pages.</p>
-        </div>
+        <div class="section-heading"><h2 id="work-heading" data-enter>Selected work</h2></div>
         <ul class="work-references">
-          <li data-enter><a href="projects/war-of-the-worlds.html"><span class="work-title">War of the Worlds</span><span>Cross-server admin tools</span><span aria-hidden="true">↗</span></a></li>
-          <li data-enter><a href="projects/dynamic-reverb-test.html"><span class="work-title">Dynamic Reverb Test</span><span>Room-aware audio</span><span aria-hidden="true">↗</span></a></li>
-          <li data-enter><a href="projects/exodo-wiki.html"><span class="work-title">Exodo Wiki</span><span>Layouts and templates</span><span aria-hidden="true">↗</span></a></li>
+          <li data-enter><a href="projects/war-of-the-worlds.html"><span class="work-title">War of the Worlds</span><span class="work-description">Cross-server polls &amp; announcements</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+          <li data-enter><a href="projects/dynamic-reverb-test.html"><span class="work-title">Dynamic Reverb Test</span><span class="work-description">Audio that responds to the room</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+          <li data-enter><a href="projects/exodo-wiki.html"><span class="work-title">Exodo Wiki</span><span class="work-description">A custom theme, layouts &amp; templates</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
         </ul>
+      </div>
+    </section>
+    <section id="about" class="profile" aria-labelledby="about-heading">
+      <div class="portrait" data-enter><img src="assets/images/hero-render.png" width="1774" height="887" alt="purpledan's Roblox avatar with glasses and red accents" loading="lazy" /></div>
+      <div class="profile-copy">
+        <h2 id="about-heading" data-enter>Websites first.<br />Then games.</h2>
+        <div class="profile-story" data-enter>
+          <p>I started with websites, then began making games on Roblox.</p>
+          <p>I've been coding on Roblox for over five years, working on both front-end and back-end systems.</p>
+          <a class="text-link" href="https://github.com/purpledanx" target="_blank" rel="noopener noreferrer">My GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="profile-tools" data-enter>Luau / Roblox Studio<br />HTML / CSS / JavaScript</p>
       </div>
     </section>
   </main>
   <footer id="socials" class="contact">
     <div class="wrap">
-      <div class="contact-top">
-        <h2 data-enter>Find me online</h2>
-        <p data-enter>On Discord as purpledanx.</p>
-      </div>
-      <p class="contact-name" data-enter>purpledanx</p>
-      <div class="contact-bottom">
-        <p>© 2026 purpledan</p>
-        <div class="contact-links">
-          <a href="https://github.com/purpledanx" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.roblox.com/users/1557805206/profile" target="_blank" rel="noopener noreferrer">Roblox</a>
-          <a href="mailto:purpledanielx@gmail.com">Email</a>
+      <div class="contact-top"><h2 data-enter>Find me online</h2><p data-enter>On Discord as</p></div>
+      <p class="contact-name" id="discord-handle" data-enter>purpledanx</p>
+      <div class="contact-actions" data-enter>
+        <div class="copy-control">
+          <button class="button" id="copy-discord" type="button" hidden>Copy Discord handle <span aria-hidden="true">↗</span></button>
+          <p id="copy-status" role="status" aria-live="polite"></p>
         </div>
-        <p class="contact-note">I don't check email often.</p>
+        <div class="contact-links">
+          <a href="https://github.com/purpledanx" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.roblox.com/users/1557805206/profile" target="_blank" rel="noopener noreferrer">Roblox ↗</a>
+          <a href="mailto:purpledanielx@gmail.com">Email ↗</a>
+        </div>
       </div>
+      <div class="contact-bottom" data-enter><p>© 2026 purpledan</p><p class="contact-note">I don't check email often.</p></div>
     </div>
   </footer>
 </body>

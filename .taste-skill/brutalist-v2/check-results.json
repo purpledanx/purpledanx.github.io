@@ -1,0 +1,62 @@
+[
+  {
+    "width": 1440,
+    "entrances": 17,
+    "expected": 17,
+    "moving": 17,
+    "overflow": false,
+    "badAnchors": 0,
+    "replayedTwice": 17,
+    "heroPointer": true,
+    "covers": [],
+    "copySuccess": true,
+    "copyDenied": true,
+    "reducedMotion": true,
+    "errors": []
+  },
+  {
+    "width": 768,
+    "entrances": 17,
+    "expected": 17,
+    "moving": 17,
+    "overflow": false,
+    "badAnchors": 0,
+    "replayedTwice": 17,
+    "heroPointer": true,
+    "covers": [],
+    "copySuccess": true,
+    "copyDenied": true,
+    "reducedMotion": true,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "entrances": 17,
+    "expected": 17,
+    "moving": 17,
+    "overflow": false,
+    "badAnchors": 0,
+    "replayedTwice": 17,
+    "heroPointer": true,
+    "covers": [],
+    "copySuccess": true,
+    "copyDenied": true,
+    "reducedMotion": true,
+    "errors": []
+  },
+  {
+    "width": 320,
+    "entrances": 17,
+    "expected": 17,
+    "moving": 17,
+    "overflow": false,
+    "badAnchors": 0,
+    "replayedTwice": 17,
+    "heroPointer": true,
+    "covers": [],
+    "copySuccess": true,
+    "copyDenied": true,
+    "reducedMotion": true,
+    "errors": []
+  }
+]
