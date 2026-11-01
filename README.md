@@ -8,5 +8,3 @@ Styles live in style.css and theme/gallery behavior in script.js. The site uses 
 # running it
 Go to https://purpledanx.github.io
 
-# AI Usage
-Used AI to mainly code the website, added the blue react banner my self though.
