@@ -14,54 +14,79 @@
   <meta property="og:image:alt" content="purpledan's Roblox avatar render" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="assets/roblox.svg" />
+  <link rel="preload" href="assets/fonts/albert-sans-medium.ttf" as="font" type="font/ttf" crossorigin />
   <link rel="preload" href="assets/fonts/imbue-regular.ttf" as="font" type="font/ttf" crossorigin />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="portfolio.css" />
   <script src="script.js" defer></script>
+  <script src="assets/js/glass-scene.js" defer></script>
 </head>
 <body class="portfolio">
+  <div class="brutal-backdrop" aria-hidden="true">
+    <div class="relief-stack relief-stack--east"><i class="relief-block"></i><i class="relief-block"></i><i class="relief-block"></i><i class="relief-block"></i></div>
+    <div class="relief-stack relief-stack--west"><i class="relief-block"></i><i class="relief-block"></i><i class="relief-block"></i></div>
+    <div class="relief-stack relief-stack--bridge"><i class="relief-block"></i><i class="relief-block"></i></div>
+  </div>
   <a class="skip-link" href="#main">Skip to content</a>
   <nav class="navbar wrap" aria-label="Main navigation">
     <a class="nav-brand" href="index.html">purpledan</a>
-    <div class="nav-actions"><a href="#projects">Work</a><a href="#about">About</a><a href="#socials">Contact</a></div>
+    <div class="nav-actions"><a href="work.html">Work</a><a href="#about">About</a><a href="#socials">Contact</a></div>
   </nav>
   <main id="main">
     <header class="poster wrap">
       <div class="poster-stage">
-        <h1><span data-enter>Roblox</span><span data-enter>developer.</span></h1>
-        <div class="hero-render" data-enter><img src="assets/images/hero-render.png" width="1774" height="887" alt="" fetchpriority="high" /></div>
+        <div class="poster-copy">
+          <h1><span data-enter>purple</span><span data-enter>dan.</span></h1>
+          <div class="poster-bottom" data-enter>
+            <p>I'm purpledan. I code, from front end to back end.</p>
+            <a class="button" href="#projects">View my projects <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="hero-render" data-enter>
+          <div class="glass-scene" data-glass-scene role="group" aria-label="Folded glass sculpture" aria-describedby="glass-hint glass-keys">
+            <div class="glass-fallback" aria-hidden="true"><img src="assets/graphics/glass-fold.svg" alt="" /></div>
+          </div>
+          <img class="graphic-sticker sticker-orbit" src="assets/graphics/orbit.svg" width="100" height="100" alt="" aria-hidden="true" />
+          <img class="graphic-sticker sticker-asterisk" src="assets/graphics/asterisk.svg" width="100" height="100" alt="" aria-hidden="true" />
+          <div class="glass-footer"><figure class="avatar-window">
+          <span class="selection-handles" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <figcaption>purpledan / avatar</figcaption>
+          <div class="render-image"><img src="assets/images/hero-render.png" width="1774" height="887" alt="purpledan's Roblox avatar with glasses and red accents" fetchpriority="high" /></div>
+          <p>Building things on Roblox.</p>
+        </figure>
+          <div class="glass-toolbar"><p id="glass-hint" class="glass-hint">Folded glass study</p><div class="glass-controls" hidden><button type="button" data-reset>Reset view</button></div></div>
+          </div><p id="glass-keys" class="visually-hidden">Drag to turn the sculpture. Arrow keys turn it. Home resets the view.</p><p class="glass-status visually-hidden" role="status" aria-live="polite"></p>
+        </div>
       </div>
-      <div class="poster-bottom" data-enter>
-        <p>I'm purpledan. I build Roblox systems, from cross-server tools to room-aware audio.</p>
-        <a class="button" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
-      </div>
+      <ul class="skill-strip" aria-label="Tools I work with" data-enter><li>Roblox Studio</li><li>Luau</li><li>HTML / CSS / JavaScript</li></ul>
     </header>
     <section id="projects" class="work-index" aria-labelledby="work-heading">
       <div class="wrap">
-        <div class="section-heading"><h2 id="work-heading" data-enter>Selected work</h2></div>
+        <div class="section-heading"><h2 id="work-heading" data-enter>Selected work</h2><img class="section-graphic" src="assets/graphics/orbit.svg" width="88" height="88" alt="" aria-hidden="true" /><a class="button" href="work.html" data-enter>All my work <span aria-hidden="true">↗</span></a></div>
         <ul class="work-references">
-          <li data-enter><a href="projects/war-of-the-worlds.html"><span class="work-title">War of the Worlds</span><span class="work-description">Cross-server polls &amp; announcements</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
-          <li data-enter><a href="projects/dynamic-reverb-test.html"><span class="work-title">Dynamic Reverb Test</span><span class="work-description">Audio that responds to the room</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
-          <li data-enter><a href="projects/exodo-wiki.html"><span class="work-title">Exodo Wiki</span><span class="work-description">A custom theme, layouts &amp; templates</span><span class="work-arrow" aria-hidden="true">↗</span></a></li>
+          <li class="work-folder work-folder--systems" data-enter><a href="projects/war-of-the-worlds.html"><span class="folder-tab">Roblox systems</span><span class="work-image"><img src="assets/images/war-of-the-worlds-preview.png" width="1200" height="630" alt="War of the Worlds announcement and poll interface" loading="lazy" /></span><span class="work-copy"><span class="work-title">War of<br />the Worlds</span><span class="work-description">Cross-server polls &amp; announcements</span><span class="work-open">View project <span aria-hidden="true">↗</span></span></span></a></li>
+          <li class="work-folder work-folder--audio" data-enter><a href="projects/dynamic-reverb-test.html"><span class="folder-tab">Audio experiment</span><span class="work-image"><img src="assets/images/dynamic-reverb-preview.png" width="1200" height="630" alt="A Roblox test environment for room-aware audio" loading="lazy" /></span><span class="work-copy"><span class="work-title">Dynamic<br />Reverb Test</span><span class="work-description">Audio that responds to the room</span><span class="work-open">View project <span aria-hidden="true">↗</span></span></span></a></li>
         </ul>
       </div>
     </section>
-    <section id="about" class="profile" aria-labelledby="about-heading">
-      <div class="portrait" data-enter><img src="assets/images/hero-render.png" width="1774" height="887" alt="purpledan's Roblox avatar with glasses and red accents" loading="lazy" /></div>
-      <div class="profile-copy">
+    <section id="about" class="profile wrap" aria-labelledby="about-heading">
+      <div class="profile-intro">
         <h2 id="about-heading" data-enter>Websites first.<br />Then games.</h2>
+        <div class="toolbox" data-enter><h3>My toolbox</h3><ul><li><img src="assets/robloxstudio.svg" alt="" />Roblox Studio</li><li><img src="assets/luau.svg" alt="" />Luau</li><li><img src="assets/html5.svg" alt="" />HTML &amp; CSS</li><li><img src="assets/javascript.svg" alt="" />JavaScript</li></ul></div>
+      </div>
+      <div class="profile-copy">
         <div class="profile-story" data-enter>
           <p>I started with websites, then began making games on Roblox.</p>
           <p>I've been coding on Roblox for over five years, working on both front-end and back-end systems.</p>
           <a class="text-link" href="https://github.com/purpledanx" target="_blank" rel="noopener noreferrer">My GitHub <span aria-hidden="true">↗</span></a>
         </div>
-        <p class="profile-tools" data-enter>Luau / Roblox Studio<br />HTML / CSS / JavaScript</p>
+        <p class="profile-note" data-enter>From the interface<br />to what makes it work.<img src="assets/graphics/asterisk.svg" width="58" height="58" alt="" aria-hidden="true" /></p>
       </div>
     </section>
   </main>
   <footer id="socials" class="contact">
     <div class="wrap">
-      <div class="contact-top"><h2 data-enter>Find me online</h2><p data-enter>On Discord as</p></div>
+      <div class="contact-top"><h2 data-enter>Find me online.</h2><img class="contact-checker" src="assets/graphics/checker.svg" width="160" height="40" alt="" aria-hidden="true" /><p data-enter>Discord is the best place to reach me.</p></div>
       <p class="contact-name" id="discord-handle" data-enter>purpledanx</p>
       <div class="contact-actions" data-enter>
         <div class="copy-control">

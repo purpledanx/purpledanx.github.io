@@ -1,5 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  const reliefStacks = [...document.querySelectorAll(".relief-stack")];
+  if (reliefStacks.length) {
+    const depths = [1, -.65, .4];
+    let frame = 0;
+    let pointerX = 0;
+    let pointerY = 0;
+    const renderRelief = () => {
+      frame = 0;
+      const progress = Math.min(1, scrollY / Math.max(1, document.documentElement.scrollHeight - innerHeight));
+      reliefStacks.forEach((stack, index) => {
+        if (reducedMotion.matches) {
+          stack.style.removeProperty("transform");
+          return;
+        }
+        const depth = depths[index];
+        const x = pointerX * 22 * depth + progress * 36 * depth;
+        const y = pointerY * 16 * depth - progress * 110 * depth;
+        stack.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${progress * depth * -5}deg)`;
+      });
+    };
+    const queueRelief = () => {
+      if (!frame) frame = requestAnimationFrame(renderRelief);
+    };
+    document.addEventListener("pointermove", (event) => {
+      if (event.pointerType !== "mouse" || reducedMotion.matches) return;
+      pointerX = event.clientX / innerWidth - .5;
+      pointerY = event.clientY / innerHeight - .5;
+      queueRelief();
+    });
+    document.addEventListener("pointerleave", () => { pointerX = 0; pointerY = 0; queueRelief(); });
+    addEventListener("scroll", queueRelief, { passive: true });
+    addEventListener("resize", queueRelief);
+    reducedMotion.addEventListener("change", () => { pointerX = 0; pointerY = 0; queueRelief(); });
+    if (!reducedMotion.matches) {
+      document.querySelectorAll(".relief-block").forEach((block, index) => {
+        block.animate([
+          { opacity: .2, transform: `translate3d(${index % 2 ? 60 : -60}px, 80px, 0)` },
+          { opacity: 1, transform: "none" },
+        ], { duration: 500, delay: index * 40, easing: "cubic-bezier(.16,1,.3,1)", fill: "backwards" });
+      });
+    }
+    queueRelief();
+  }
   const poster = document.querySelector(".poster");
   const heroRender = document.querySelector(".hero-render");
   if (poster && heroRender) {
@@ -13,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
       heroRender.style.setProperty("--hero-drift", `${drift}px`);
       heroRender.style.setProperty("--look-x", `${reducedMotion.matches ? 0 : lookX}px`);
       heroRender.style.setProperty("--look-y", `${reducedMotion.matches ? 0 : lookY}px`);
+      heroRender.style.setProperty("--sticker-turn", `${reducedMotion.matches ? 0 : lookX * 3}deg`);
     };
     const queueHero = () => {
       if (!frame) frame = requestAnimationFrame(renderHero);
@@ -46,6 +90,26 @@ document.addEventListener("DOMContentLoaded", () => {
     addEventListener("resize", queueParallax);
     reducedMotion.addEventListener("change", queueParallax);
     queueParallax();
+  }
+
+  const filters = document.querySelector(".work-filters");
+  if (filters) {
+    const works = [...document.querySelectorAll(".archive-list > li")];
+    const count = document.querySelector("#work-count");
+    const empty = document.querySelector(".work-empty");
+    filters.hidden = false;
+    filters.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-filter]");
+      if (!button) return;
+      filters.querySelectorAll("button").forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+      let total = 0;
+      works.forEach((work) => {
+        work.hidden = button.dataset.filter !== "all" && work.dataset.category !== button.dataset.filter;
+        if (!work.hidden) total++;
+      });
+      count.textContent = `${total} ${total === 1 ? "project" : "projects"}`;
+      empty.hidden = total > 0;
+    });
   }
 
   const copyButton = document.querySelector("#copy-discord");
@@ -132,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.hidden) document.querySelectorAll("video").forEach((video) => video.pause());
   });
 
-  document.querySelectorAll(".gallery-slide img, .gallery-slide video, .project-visual img, .project-visual video, .portrait img, .wiki-frames img").forEach((media) => {
+  document.querySelectorAll(".gallery-slide img, .gallery-slide video, .work-image img, .render-image img").forEach((media) => {
     const status = document.createElement("p");
     status.className = "media-status";
     status.setAttribute("role", "status");
