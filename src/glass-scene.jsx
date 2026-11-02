@@ -5,13 +5,12 @@ import * as THREE from 'three';
 
 extend(THREE);
 const host = document.querySelector('[data-glass-scene]');
-const refractionBackground = new THREE.Color('#6b6b6b');
 
 class FoldCurve extends THREE.Curve {
   getPoint(t, target = new THREE.Vector3()) {
     const a = t * Math.PI * 2;
-    return target.set(.62 * (1.7 + .48 * Math.cos(3 * a)) * Math.cos(2 * a),
-      1.04 * (2.1 + .45 * Math.cos(3 * a)) * Math.sin(2 * a), .55 * Math.sin(3 * a));
+    return target.set(1.18 * Math.cos(a) + .14 * Math.sin(2 * a),
+      2.12 * Math.sin(a), .34 * Math.sin(2 * a + .3));
   }
 }
 
@@ -24,11 +23,11 @@ function foldedGlass() {
   const vertex = new THREE.Vector3();
   for (let i = 0; i <= segments; i++) {
     const a = i / segments * Math.PI * 2;
-    const width = .36 + .12 * Math.cos(3 * a + .4);
+    const width = .34 + .09 * Math.cos(2 * a + .4);
     curve.getPointAt(i / segments, point);
     for (let j = 0; j <= sides; j++) {
       const b = j / sides * Math.PI * 2;
-      const twist = a * 2 + .35 * Math.sin(3 * a);
+      const twist = a + .3 * Math.sin(2 * a);
       const u = -Math.cos(b) * width * 1.4;
       const v = Math.sin(b) * width * .72;
       vertex.copy(point)
@@ -43,13 +42,12 @@ function foldedGlass() {
 
 function studioEnvironment(renderer) {
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color('#151515');
+  scene.background = new THREE.Color('#777777');
   const geometry = new THREE.PlaneGeometry(1, 1);
   const panels = [
-    [-4, 1, 3, 1.7, 8, 7], [4, 2, 1, 1.2, 7, 5],
-    [0, 5, 0, 8, 2, 6], [-1, -3, 4, 6, .6, 5],
-    [2, 0, -5, 1.2, 7, 6], [-3, 0, -4, 1.5, 5, 4],
-    [-1, 1, 5, 2, 6, 3], [1, 0, 4, .7, 8, 0],
+    [-4, 2, 4, 3, 8, 4], [4, 1, 2, 2, 7, 3],
+    [0, 5, -1, 7, 3, 3], [-3, 0, -4, 1.4, 8, 0],
+    [1.6, 0, -5, 2, 8, 3],
   ];
   for (const [x, y, z, width, height, intensity] of panels) {
     const panel = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
@@ -60,9 +58,9 @@ function studioEnvironment(renderer) {
     panel.lookAt(0, 0, 0);
     scene.add(panel);
   }
-  const generator = new THREE.PMREMGenerator(renderer);
-  const environment = generator.fromScene(scene, .01, .1, 30);
-  generator.dispose();
+  const environment = new THREE.WebGLCubeRenderTarget(256, { type: THREE.HalfFloatType });
+  const camera = new THREE.CubeCamera(.1, 30, environment);
+  camera.update(renderer, scene);
   geometry.dispose();
   scene.traverse(object => object.material?.dispose());
   return environment;
@@ -71,8 +69,29 @@ function studioEnvironment(renderer) {
 function Sculpture({ host, environment, controls, lifecycle }) {
   const mesh = useRef();
   const { invalidate, setFrameloop } = useThree();
-  useFrame(() => {
+  useFrame((_, delta) => {
+    const dt = Math.min(delta, .05);
+    if (!controls.dragging) {
+      const coast = (1 - Math.exp(-7 * dt)) / 7;
+      controls.targetYaw += controls.velocityYaw * coast;
+      controls.targetPitch += controls.velocityPitch * coast;
+      controls.velocityYaw *= Math.exp(-7 * dt);
+      controls.velocityPitch *= Math.exp(-7 * dt);
+    }
+    const blend = 1 - Math.exp(-20 * dt);
+    const targetYaw = controls.targetYaw + controls.hoverYaw;
+    const targetPitch = controls.targetPitch + controls.hoverPitch;
+    controls.yaw += (targetYaw - controls.yaw) * blend;
+    controls.pitch += (targetPitch - controls.pitch) * blend;
+    const moving = Math.abs(targetYaw - controls.yaw) + Math.abs(targetPitch - controls.pitch)
+      + (controls.dragging ? 0 : Math.abs(controls.velocityYaw) + Math.abs(controls.velocityPitch)) > .0005;
+    if (!moving) {
+      controls.yaw = targetYaw;
+      controls.pitch = targetPitch;
+      controls.velocityYaw = controls.velocityPitch = 0;
+    }
     mesh.current.rotation.set(.13 + controls.pitch, -.25 + controls.yaw, -.4);
+    if (moving && lifecycle.visible && !lifecycle.lost) invalidate();
     if (!lifecycle.lost) host.dataset.ready = 'true';
   }, -1);
   useEffect(() => {
@@ -84,11 +103,11 @@ function Sculpture({ host, environment, controls, lifecycle }) {
   return <>
     <primitive object={environment.texture} attach="environment" />
     <mesh ref={mesh} geometry={controls.geometry}>
-      <MeshTransmissionMaterial samples={8} resolution={768} backsideResolution={384}
-        backside backsideThickness={.6} thickness={1.3} ior={1.85}
+      <MeshTransmissionMaterial samples={6} resolution={512}
+        thickness={.65} ior={1.5}
         transmission={1} roughness={0} metalness={0} color="#ffffff"
-        clearcoat={1} clearcoatRoughness={.025} envMapIntensity={2.2}
-        backsideEnvMapIntensity={1.6} chromaticAberration={.018} background={refractionBackground}
+        clearcoat={1} clearcoatRoughness={.04} envMapIntensity={1.8}
+        chromaticAberration={.006} background={environment.texture}
         anisotropicBlur={0} distortion={0} temporalDistortion={0} />
     </mesh>
   </>;
@@ -108,7 +127,9 @@ async function mountGlass(host) {
   const root = createRoot(canvas);
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   let reduced = motion.matches;
-  const controls = { pitch: 0, yaw: 0, geometry: foldedGlass() };
+  const controls = { pitch: 0, yaw: 0, targetPitch: 0, targetYaw: 0,
+    hoverPitch: 0, hoverYaw: 0, velocityPitch: 0, velocityYaw: 0,
+    dragging: false, geometry: foldedGlass() };
   const lifecycle = { render: null, loop: null, visible: true, lost: false };
   const toolbar = host.parentElement.querySelector('.glass-controls');
   const hint = host.parentElement.querySelector('.glass-hint');
@@ -126,14 +147,21 @@ async function mountGlass(host) {
   root.render(<Sculpture host={host} environment={environment} controls={controls} lifecycle={lifecycle} />);
 
   let drag = null;
-  const endDrag = () => {
-    if (drag && host.hasPointerCapture(drag.id)) host.releasePointerCapture(drag.id);
+  const endDrag = event => {
+    const ended = drag;
     drag = null;
+    controls.dragging = false;
+    if (ended && (!event || event.type !== 'pointerup' || performance.now() - ended.time > 90)) {
+      controls.velocityYaw = controls.velocityPitch = 0;
+    }
+    if (ended && host.hasPointerCapture(ended.id)) host.releasePointerCapture(ended.id);
     host.classList.remove('is-dragging');
+    lifecycle.render?.();
   };
   const reset = () => {
     endDrag();
-    controls.pitch = controls.yaw = 0;
+    controls.pitch = controls.yaw = controls.targetPitch = controls.targetYaw = 0;
+    controls.hoverPitch = controls.hoverYaw = controls.velocityPitch = controls.velocityYaw = 0;
     lifecycle.render?.();
   };
   const syncMotion = () => {
@@ -150,26 +178,49 @@ async function mountGlass(host) {
   host.addEventListener('pointerdown', event => {
     if (reduced || lifecycle.lost || !event.isPrimary || event.button !== 0) return;
     const rect = host.getBoundingClientRect();
-    drag = { id: event.pointerId, x: event.clientX, y: event.clientY, width: rect.width,
-      pitch: controls.pitch, yaw: controls.yaw };
+    controls.velocityYaw = controls.velocityPitch = 0;
+    controls.hoverYaw = controls.hoverPitch = 0;
+    controls.dragging = true;
+    drag = { id: event.pointerId, x: event.clientX, y: event.clientY, width: rect.width, time: performance.now() };
     host.setPointerCapture(event.pointerId);
     host.classList.add('is-dragging');
   });
   host.addEventListener('pointermove', event => {
-    if (!drag || event.pointerId !== drag.id) return;
-    controls.yaw = THREE.MathUtils.clamp(drag.yaw + (event.clientX - drag.x) / drag.width * 1.8, -.8, .8);
-    controls.pitch = THREE.MathUtils.clamp(drag.pitch + (event.clientY - drag.y) / drag.width * 1.4, -.5, .5);
+    if (reduced || lifecycle.lost) return;
+    if (!drag) {
+      if (event.pointerType !== 'mouse') return;
+      const rect = host.getBoundingClientRect();
+      controls.hoverYaw = ((event.clientX - rect.left) / rect.width - .5) * .2;
+      controls.hoverPitch = ((event.clientY - rect.top) / rect.height - .5) * .16;
+      lifecycle.render?.();
+      return;
+    }
+    if (event.pointerId !== drag.id) return;
+    const now = performance.now();
+    const seconds = Math.max((now - drag.time) / 1000, .008);
+    const yaw = (event.clientX - drag.x) / drag.width * Math.PI * 2;
+    const pitch = (event.clientY - drag.y) / drag.width * Math.PI * 2;
+    controls.targetYaw += yaw;
+    controls.targetPitch += pitch;
+    controls.velocityYaw = THREE.MathUtils.clamp(yaw / seconds, -5, 5);
+    controls.velocityPitch = THREE.MathUtils.clamp(pitch / seconds, -5, 5);
+    Object.assign(drag, { x: event.clientX, y: event.clientY, time: now });
+    lifecycle.render?.();
+  });
+  host.addEventListener('pointerleave', () => {
+    controls.hoverYaw = controls.hoverPitch = 0;
     lifecycle.render?.();
   });
   for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) host.addEventListener(type, endDrag);
   host.addEventListener('keydown', event => {
     if (reduced || lifecycle.lost) return;
-    const directions = { ArrowLeft: [-.12, 0], ArrowRight: [.12, 0], ArrowUp: [0, -.12], ArrowDown: [0, .12] };
+    const directions = { ArrowLeft: [-.25, 0], ArrowRight: [.25, 0], ArrowUp: [0, -.25], ArrowDown: [0, .25] };
     if (event.key === 'Home' || event.key === 'Escape') { event.preventDefault(); reset(); return; }
     if (!directions[event.key]) return;
     event.preventDefault();
-    controls.yaw = THREE.MathUtils.clamp(controls.yaw + directions[event.key][0], -.8, .8);
-    controls.pitch = THREE.MathUtils.clamp(controls.pitch + directions[event.key][1], -.5, .5);
+    controls.velocityYaw = controls.velocityPitch = 0;
+    controls.targetYaw += directions[event.key][0];
+    controls.targetPitch += directions[event.key][1];
     lifecycle.render?.();
   });
   const resize = new ResizeObserver(() => {

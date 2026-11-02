@@ -1,97 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+﻿document.addEventListener("DOMContentLoaded", () => {
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
-  const reliefStacks = [...document.querySelectorAll(".relief-stack")];
-  if (reliefStacks.length) {
-    const depths = [1, -.65, .4];
-    let frame = 0;
-    let pointerX = 0;
-    let pointerY = 0;
-    const renderRelief = () => {
-      frame = 0;
-      const progress = Math.min(1, scrollY / Math.max(1, document.documentElement.scrollHeight - innerHeight));
-      reliefStacks.forEach((stack, index) => {
-        if (reducedMotion.matches) {
-          stack.style.removeProperty("transform");
-          return;
-        }
-        const depth = depths[index];
-        const x = pointerX * 22 * depth + progress * 36 * depth;
-        const y = pointerY * 16 * depth - progress * 110 * depth;
-        stack.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${progress * depth * -5}deg)`;
-      });
-    };
-    const queueRelief = () => {
-      if (!frame) frame = requestAnimationFrame(renderRelief);
-    };
-    document.addEventListener("pointermove", (event) => {
-      if (event.pointerType !== "mouse" || reducedMotion.matches) return;
-      pointerX = event.clientX / innerWidth - .5;
-      pointerY = event.clientY / innerHeight - .5;
-      queueRelief();
-    });
-    document.addEventListener("pointerleave", () => { pointerX = 0; pointerY = 0; queueRelief(); });
-    addEventListener("scroll", queueRelief, { passive: true });
-    addEventListener("resize", queueRelief);
-    reducedMotion.addEventListener("change", () => { pointerX = 0; pointerY = 0; queueRelief(); });
-    if (!reducedMotion.matches) {
-      document.querySelectorAll(".relief-block").forEach((block, index) => {
-        block.animate([
-          { opacity: .2, transform: `translate3d(${index % 2 ? 60 : -60}px, 80px, 0)` },
-          { opacity: 1, transform: "none" },
-        ], { duration: 500, delay: index * 40, easing: "cubic-bezier(.16,1,.3,1)", fill: "backwards" });
-      });
-    }
-    queueRelief();
-  }
-  const poster = document.querySelector(".poster");
-  const heroRender = document.querySelector(".hero-render");
-  if (poster && heroRender) {
-    let frame = 0;
-    let lookX = 0;
-    let lookY = 0;
-    const renderHero = () => {
-      frame = 0;
-      const bounds = poster.getBoundingClientRect();
-      const drift = reducedMotion.matches ? 0 : Math.max(-12, Math.min(12, -bounds.top * .04));
-      heroRender.style.setProperty("--hero-drift", `${drift}px`);
-      heroRender.style.setProperty("--look-x", `${reducedMotion.matches ? 0 : lookX}px`);
-      heroRender.style.setProperty("--look-y", `${reducedMotion.matches ? 0 : lookY}px`);
-      heroRender.style.setProperty("--sticker-turn", `${reducedMotion.matches ? 0 : lookX * 3}deg`);
-    };
-    const queueHero = () => {
-      if (!frame) frame = requestAnimationFrame(renderHero);
-    };
-    poster.addEventListener("pointermove", (event) => {
-      if (event.pointerType !== "mouse" || reducedMotion.matches) return;
-      const bounds = poster.getBoundingClientRect();
-      lookX = ((event.clientX - bounds.left) / bounds.width - .5) * 16;
-      lookY = ((event.clientY - bounds.top) / bounds.height - .5) * 12;
-      queueHero();
-    });
-    poster.addEventListener("pointerleave", () => { lookX = 0; lookY = 0; queueHero(); });
-    addEventListener("scroll", queueHero, { passive: true });
-    addEventListener("resize", queueHero);
-    reducedMotion.addEventListener("change", () => { lookX = 0; lookY = 0; queueHero(); });
-    queueHero();
-  }
-  const portrait = document.querySelector(".portrait");
-  if (portrait) {
-    let frame = 0;
-    const renderParallax = () => {
-      frame = 0;
-      const bounds = portrait.getBoundingClientRect();
-      const progress = reducedMotion.matches ? 0 : Math.max(-1, Math.min(1, (innerHeight / 2 - bounds.top - bounds.height / 2) / innerHeight));
-      portrait.style.setProperty("--portrait-drift", `${progress * 24}px`);
-    };
-    const queueParallax = () => {
-      if (!frame) frame = requestAnimationFrame(renderParallax);
-    };
-    addEventListener("scroll", queueParallax, { passive: true });
-    addEventListener("resize", queueParallax);
-    reducedMotion.addEventListener("change", queueParallax);
-    queueParallax();
-  }
-
   const filters = document.querySelector(".work-filters");
   if (filters) {
     const works = [...document.querySelectorAll(".archive-list > li")];
@@ -152,20 +60,20 @@ document.addEventListener("DOMContentLoaded", () => {
         const group = target.closest("header, section, footer") || target.parentElement;
         const order = groups.get(group) || 0;
         groups.set(group, order + 1);
-        const isRow = target.matches(".work-references > li");
+        const isRow = target.matches(".work-feature, .archive-list > li, .profile-portrait");
         const isName = target.matches(".contact-name");
-        const isHeading = target.matches("h2, h1 > span");
+        const isHeading = target.matches("h1, h2");
         const from = isName ? "translateY(36px) scale(.98)"
-          : isRow ? "translateX(-24px)"
-          : isHeading ? "translateX(-16px)"
-          : "translateY(18px)";
+          : isRow ? "translateY(32px)"
+          : isHeading ? "translateY(24px)"
+          : "translateY(12px)";
         const animation = target.animate([
           { opacity: .35, transform: from },
           { opacity: 1, transform: "none" },
         ], {
-          duration: isName ? 700 : isHeading ? 560 : 480,
+          duration: isHeading ? 900 : isRow ? 800 : 700,
           delay: Math.min(order, 3) * 65,
-          easing: "cubic-bezier(.16,1,.3,1)",
+          easing: "cubic-bezier(.19,1,.22,1)",
           fill: "backwards",
         });
         activeEntrances.set(target, animation);
@@ -196,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.hidden) document.querySelectorAll("video").forEach((video) => video.pause());
   });
 
-  document.querySelectorAll(".gallery-slide img, .gallery-slide video, .work-image img, .render-image img").forEach((media) => {
+  document.querySelectorAll(".gallery-slide img, .gallery-slide video, .work-image img, .profile-portrait img").forEach((media) => {
     const status = document.createElement("p");
     status.className = "media-status";
     status.setAttribute("role", "status");
